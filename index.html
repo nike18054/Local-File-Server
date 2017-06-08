@@ -1,0 +1,83 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+	
+	<head>
+		<title>Local PHP Sever</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+		<script src="js/bootsrap.js"></script>
+		<script src="js/jquery-3.2.1.js"></script>
+		
+		<style>
+			.bg1{
+				background-color: #ccc;
+				height: 500px;
+				width: 100%;
+			}
+			.bg2{
+				background-color: #ccc;
+			}
+			.navbar{
+				border-radius: 0px;
+			}
+			.buttonstyle{
+				color: #fff;
+				text-decoration: none;
+			}
+			.buttonstyle:hover {
+				color: #fff;
+				text-decoration: none;
+			}
+		
+		</style>
+	</head>
+    <body>
+		
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			  </button>
+			  <a class="navbar-brand" href="#">LOCAL FILE SERVER</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="phpsysinfo/index.php">Server Stats</a></li>
+				<li><a href="filelibrary.php">File Library</a></li> 
+				<li><a href="#">Page 3</a></li> 
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		
+		<div class="container-fluid bg1">
+		
+			<div class="col-sm-6">
+				<button class="btn-primary">
+				<a class="buttonstyle" href="phpsysinfo/index.php">
+					Server Status and Info
+				</a>
+				</button>
+			</div>
+		
+			<div class="col-sm-6">
+				<form action="upload.php" method="POST" enctype="multipart/form-data">
+					Select a file to upload:
+					<input type="file" name="fileToUpload" id="fileToUpload">
+					<button type="submit" name="submit">
+						Submit File
+						<span class="glyphicon glyphicon-ok"></span>
+					</button>
+				</form>
+			</div>
+		</div>
+    </body>
+</html>
+
